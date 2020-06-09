@@ -30,8 +30,8 @@ class SettingServiceProvider extends ServiceProvider
     protected function registerConfig()
     {
         $this->publishes([
-            realpath(__DIR__ . "/config/setting.php") => config_path('setting.php')
+            realpath(__DIR__ . "/../config/setting.php") => config_path('setting.php')
         ], 'config');
-        $this->mergeConfigFrom(realpath(__DIR__ . '/config/setting.php'), 'setting');
+        $this->mergeConfigFrom(realpath(__DIR__ . '/../config/setting.php'), 'setting');
     }
 }
